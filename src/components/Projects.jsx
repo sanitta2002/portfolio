@@ -12,7 +12,6 @@ const Projects = () => {
       tech: ["Node.js", "Express", "MongoDB", "React"],
       github: "https://github.com/sanitta2002/Planix",
       live: "https://planix-demo.com",
-      future: ["Real-time updates", "Notifications", "Advanced analytics dashboard"]
     },
     {
       title: "SketchSphere",
@@ -22,7 +21,6 @@ const Projects = () => {
       tech: ["Node.js", "Express", "MongoDB", "EJS"],
       github: "https://github.com/sanitta2002/SketchSphere",
       live: "https://sketchsphere-demo.com",
-      future: ["Online payment integration", "Wishlist feature", "Coupon system"]
     }
   ];
 
@@ -84,14 +82,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="project-future">
-                  <h4>Future Improvements</h4>
-                  <ul>
-                    {project.future.map(f => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                </div>
+                
               </div>
             </motion.div>
           ))}
