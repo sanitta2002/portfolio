@@ -1,0 +1,10 @@
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* Ensures it stays behind all content */
+  pointer-events: none; /* Let clicks pass through to components below */
+  background: transparent;
+}

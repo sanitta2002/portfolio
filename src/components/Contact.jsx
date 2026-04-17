@@ -45,7 +45,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            05. What's Next
+            06. What's Next
           </motion.div>
           <motion.h2 
             className="section-title"
@@ -70,30 +70,38 @@ const Contact = () => {
 
         <div className="contact-content">
           <motion.div 
-            className="contact-info glass-card"
+            className="contact-image-panel glass-card"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3>Connect with me</h3>
-            <p className="contact-desc">
-              Reach out if you want to collaborate on a project or simply have a chat about web development.
-            </p>
+            <img 
+              src="/contact.png" 
+              alt="Contact Workstation" 
+              className="contact-bg-img" 
+              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"; }} 
+            />
+            <div className="contact-image-overlay">
+              <h3>Let's collaborate!</h3>
+              <p className="contact-desc">
+                Reach out if you want to collaborate on a project or simply have a chat about web development.
+              </p>
 
-            <div className="contact-links">
-              <a href="mailto:sanittajohnson28@gmail.com" className="contact-link">
-                <div className="link-icon"><FaEnvelope /></div>
-                <span>sanittajohnson28@gmail.com</span>
-              </a>
-              <a href="https://www.linkedin.com/in/sanitta-johnson-5b7820325" target="_blank" rel="noreferrer" className="contact-link">
-                <div className="link-icon"><FaLinkedin /></div>
-                <span>LinkedIn Profile</span>
-              </a>
-              <a href="https://github.com/sanitta2002" target="_blank" rel="noreferrer" className="contact-link">
-                <div className="link-icon"><FaGithub /></div>
-                <span>GitHub Portfolio</span>
-              </a>
+              <div className="contact-links-photo">
+                <a href="mailto:sanittajohnson28@gmail.com" className="contact-link-light">
+                  <div className="link-icon-light"><FaEnvelope /></div>
+                  <span>sanittajohnson28@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sanitta-johnson-5b7820325" target="_blank" rel="noreferrer" className="contact-link-light">
+                  <div className="link-icon-light"><FaLinkedin /></div>
+                  <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://github.com/sanitta2002" target="_blank" rel="noreferrer" className="contact-link-light">
+                  <div className="link-icon-light"><FaGithub /></div>
+                  <span>GitHub Portfolio</span>
+                </a>
+              </div>
             </div>
           </motion.div>
 

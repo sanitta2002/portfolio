@@ -13,7 +13,7 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            04. Background
+            05. Background
           </motion.div>
           <motion.h2 
             className="section-title"
@@ -26,74 +26,94 @@ const Experience = () => {
           </motion.h2>
         </div>
 
-        <div className="experience-grid">
+        <div className="experience-content">
           <motion.div 
-            className="timeline"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="experience-image-wrapper"
+            initial={{ opacity: 0, scale: 0.9, x: -30 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="timeline-header">
-              <FaBriefcase className="timeline-icon text-cyan" />
-              <h3>Experience</h3>
+            <div className="experience-image-glass glass-card">
+              <img 
+                src="/experience.png" 
+                alt="Experience" 
+                className="experience-image" 
+                onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop"; }} 
+              />
+              <div className="image-backdrop-glow blur-purple"></div>
             </div>
-            
-            <div className="timeline-item glass-card">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h4>MERN Stack Developer</h4>
-                <p className="timeline-entity">Brototype</p>
-                <p className="timeline-desc">
-                  Completed an intensive, self-paced MERN Stack development program focused on building 
-                  production-ready full-stack applications. Gained deep hands-on experience architecting 
-                  robust Node.js backends and dynamic React frontends through real-world project development.
-                </p>
-                <div className="timeline-tags">
-                  <span className="tech-badge">MERN Stack</span>
-                  <span className="tech-badge">Project-Driven</span>
-                  <span className="tech-badge">Continuous Learner</span>
+          </motion.div>
+
+          <div className="experience-timelines">
+            <motion.div 
+              className="timeline"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="timeline-header">
+                <FaBriefcase className="timeline-icon text-cyan" />
+                <h3>Experience</h3>
+              </div>
+              
+              <div className="timeline-item glass-card">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h4>MERN Stack Developer</h4>
+                  <p className="timeline-entity">Brototype</p>
+                  <p className="timeline-desc">
+                    Completed an intensive, self-paced MERN Stack development program focused on building 
+                    production-ready full-stack applications. Gained deep hands-on experience architecting 
+                    robust Node.js backends and dynamic React frontends through real-world project development.
+                  </p>
+                  <div className="timeline-tags">
+                    <span className="tech-badge">MERN Stack</span>
+                    <span className="tech-badge">Project-Driven</span>
+                    <span className="tech-badge">Continuous Learner</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div 
-            className="timeline"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="timeline-header">
-              <FaGraduationCap className="timeline-icon text-purple" />
-              <h3>Education</h3>
-            </div>
-            
-            <div className="timeline-item glass-card">
-              <div className="timeline-dot dot-purple"></div>
-              <div className="timeline-content">
-                <h4>Bachelor of Computer Applications</h4>
-                <p className="timeline-entity">St. Joseph’s College, Irinjalakuda</p>
-                <p className="timeline-desc">
-                  Graduated with a strong academic foundation in computer science principles, programming structures, 
-                  and software engineering practices.
-                </p>
+            <motion.div 
+              className="timeline mt-40"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="timeline-header">
+                <FaGraduationCap className="timeline-icon text-purple" />
+                <h3>Education</h3>
               </div>
-            </div>
+              
+              <div className="timeline-item glass-card mb-20">
+                <div className="timeline-dot dot-purple"></div>
+                <div className="timeline-content">
+                  <h4>Bachelor of Computer Applications</h4>
+                  <p className="timeline-entity">St. Joseph’s College, Irinjalakuda</p>
+                  <p className="timeline-desc">
+                    Graduated with a strong academic foundation in computer science principles, programming structures, 
+                    and software engineering practices.
+                  </p>
+                </div>
+              </div>
 
-            <div className="timeline-item glass-card">
-              <div className="timeline-dot dot-purple"></div>
-              <div className="timeline-content">
-                <h4>Higher Secondary Education</h4>
-                <p className="timeline-entity">Kerala State Board</p>
-                <p className="timeline-desc">
-                  Completed higher secondary education with a focus on core subjects, building a strong academic 
-                  foundation for further studies in computer science.
-                </p>
+              <div className="timeline-item glass-card">
+                <div className="timeline-dot dot-purple"></div>
+                <div className="timeline-content">
+                  <h4>Higher Secondary Education</h4>
+                  <p className="timeline-entity">Kerala State Board</p>
+                  <p className="timeline-desc">
+                    Completed higher secondary education with a focus on core subjects, building a strong academic 
+                    foundation for further studies in computer science.
+                  </p>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
